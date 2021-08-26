@@ -1,0 +1,129 @@
+@import "https://fonts.googleapis.com/css?family=Segoe:100";
+body{
+	font-family: 'Segoe UI Symbol', sans-serif;		
+}
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+
+.back{
+	
+	padding: 100%,100%;
+	
+	
+}
+
+.sidebar{
+	position: fixed;
+	left: -250px;
+	width: 225px;
+	height: 100%;
+	background: #fff;
+	transition: all .5s ease;
+}
+
+.sidebar header{
+	font-size: 20px;
+	color: black;
+	text-align: center;
+	line-height: 70px;
+	background: #87CEEB;
+	user-select: none;
+}
+h5{
+font-size:15px;
+position:absolute;
+}
+
+.sidebar ul a{
+	display: block;
+	height: 10%;
+	width: 100%;
+	line-height: 65px;
+	font-size: 15px;
+	color: #042331;
+	padding-left: 40px;
+	box-sizing: border-box;
+	border-top: 1px solid rgba(255,255,255,.1);
+	border-bottom: 0.5px black;
+	transition: .4s;
+}
+
+ul li:hover a{
+	padding-left: 50px;
+}
+
+.sidebar ul a i{
+	margin-right: 16px;
+}
+
+
+
+label #btn, label #cancel{
+	position: absolute;
+	cursor: pointer;
+	background: transparent;
+	border-radius: 3px;
+}
+
+label #btn{
+	left: 2px;
+	top: 1px;
+	font-size: 20px;
+	color: black;
+	padding: 6px 12px;
+	transition: all .5s ease;
+}
+
+label #cancel{
+	z-index: 1111;
+	left: -195px;
+	top: 45px;
+	font-size: 20px;
+	color: #0a5275;
+	padding: 4px 9px;
+	transition: all .5s ease;
+}
+
+#check{
+	display: none;
+	}
+
+#check:checked ~ .sidebar{
+	left: 0;
+}
+
+#check:checked ~ label #btn{
+	left: 250px;
+	opacity: 0;
+	pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+	top: 47px;
+	left: 180px;
+}
+
+#check:checked ~ section{
+	margin-left: 250px;
+	transition: all .5s;
+}
+
+section{
+	height: 100%;
+	transition: all .5s;
+}
+
+
+.sidebar ul a:hover{
+	color: #255784;
+	background: #ECF7FC;
+	box-shadow: 0 0 10px #2196f3;
+	transition-delay: 0.1s;
+}
+
+
+

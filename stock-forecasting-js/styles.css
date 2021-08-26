@@ -1,0 +1,141 @@
+@import "https://fonts.googleapis.com/css?family=Lato:100";
+@import "https://fonts.googleapis.com/css?family=poppins:100";
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 10px;
+	font-family: "Segoe", Segoe UI Symbol, sans-serif;
+}
+
+section{
+	width: 100%;
+	height: 100vh;
+	color: black;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23D5AB, #D5237F);
+	background-size: 400% 400%;
+	position: relative;
+	animation: change 10s ease-in-out infinite;
+	} 
+
+figure{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	justify-content: center;
+	min-height: 125vh;
+}
+
+h1{
+    font-family: 'Oswald', sans-serif;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	border: 1.5px solid black;
+	border-radius: 5px;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 3rem 5rem;
+}
+
+button{
+	font-family: "Segoe", Segoe UI Symbol, sans-serif;
+	position: relative;
+	color: black;
+	text-transform: uppercase;
+	background-color: transparent;
+	font-size: 14px;
+	letter-spacing: 3px;
+	overflow: hidden;
+	padding: 10px 10px;
+	cursor: pointer;
+	border: none;
+}
+
+button:hover {
+		color: #333;
+		background-color: #1bffff;
+		transition-delay: .35s;
+		box-shadow: 0 0 10px #1bffff,
+					0 0 40px #1bffff,
+					0 0 80px #1bffff;
+		}
+
+span{
+	
+	position: absolute;
+	display: block;
+}
+
+button span:nth-child(1){
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(90deg, transparent, black);
+	transition-delay: .25s;
+}
+button:hover span:nth-child(1){
+	left: 100%;
+	transition: .5s;
+}
+
+button span:nth-child(2){
+	top: -100%;
+	right: 0;
+	width: 3px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, black);
+	transition-delay: .25s;
+}
+button:hover span:nth-child(2){
+	top: 100%;
+	transition: .5s;
+}
+
+button span:nth-child(3){
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(270deg, transparent, black);
+	transition-delay: .25s;
+}
+button:hover span:nth-child(3){
+	right: 100%;
+	transition: .5s;
+}
+
+button span:nth-child(4){
+	bottom: -100%;
+	left: 0;
+	width: 3px;
+	height: 100%;
+	background: linear-gradient(0, transparent, black);
+	transition-delay: .25s;
+}
+button:hover span:nth-child(4){
+	bottom: 100%;
+	transition: .5s;
+}
+
+@keyframes change {
+	0%{
+		background-position: 0 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0 50%;
+	}
+}
